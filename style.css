@@ -29,19 +29,12 @@ p {
     color: white;
 }
 
-.logo {
-    width: 50px;
-    fill: white;
-    padding-right: 15px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .inner-header {
     height: 40vh;
     width: 100%;
     margin: 0;
     padding: 0;
+
 }
 
 .flex {
@@ -104,6 +97,25 @@ p {
         transform: translate3d(85px, 0, 0);
     }
 }
+.loan{
+    height: 500px;
+    width: 500px;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+    animation-name: floating;
+    animation-duration: 3s;
+
+}
+
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
 
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
@@ -119,7 +131,30 @@ p {
     h1 {
         font-size: 24px;
     }
+
+    .loan{
+        height: 250px;
+        width: 250px;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        margin-left: 30px;
+        margin-top: 5px;
+        animation-name: floating;
+        animation-duration: 3s;
+    
+    }
+
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 15px); }
+        100%   { transform: translate(0, -0px); }   
+    }
+    
+    
+
 }
+
+
 
 .form {
     display: flex;
@@ -128,13 +163,26 @@ p {
     height: auto;
 }
 
+.main{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+
+
 .block {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
+    margin-bottom: 40px;
     
 }
+
 
 .form-group {
     background-color: rgb(20, 64, 146);
@@ -153,12 +201,6 @@ p {
     width: 150px;
     border-radius: 23px;
     background-color: rgb(164, 205, 224);
-}
-
-.box {
-    width: 400px;
-    margin: 20px;
-    padding: 5px;
 }
 
 button {
@@ -201,4 +243,8 @@ button:active {
 
 .text{
     color: white;
+}
+
+footer{
+    font-size: 12px;
 }
