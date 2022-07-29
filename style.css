@@ -248,3 +248,11 @@ button:active {
 footer{
     font-size: 12px;
 }
+
+.resultado{
+    visibility: hidden;
+}
+
+.resultado1{
+    visibility: hidden;
+}

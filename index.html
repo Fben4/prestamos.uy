@@ -23,12 +23,12 @@
             <div class="main col-lg-6">
                 <img class="loan" src="loans.svg" alt="">
             </div>
-            <div class="form col-lg-6 ">
+            <div class="form col-lg-6">
 
                 <div class="m_botton">
-                    <div class="form-group container-sm">
+                    <div class="form-group container-md">
                         <label class="block" for="">Ingrese el monto</label>
-                        <input type="number" class="form-control form-control-sm" id="monto">
+                        <input type="number" class="form-control form-control-sm" id="monto" ype="number" min="1" pattern="^[0-9]+">
                     </div>
             
                     <div class="form-group container-sm">
@@ -58,8 +58,13 @@
                             <option value="12">12</option>
                         </select>
                     </div>
-                    <div class="form-group container-sm"> 
-                        <div id="show">
+                    <div class="form-group container-sm resultado"> 
+                        <div class="resultado" id="show">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group container-sm resultado1">
+                        <div id="total">
 
                         </div>
                     </div>
