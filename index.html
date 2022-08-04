@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
     <link rel="stylesheet" href="style.css">
     <title>Prestamos.uy</title>
 </head>
@@ -13,7 +17,7 @@
     
     <div class="header">
     <div class="inner-header flex">
-        <h1>Prestamos.uy</h1>
+        <h1 class="animate__animated animate__slideInDown">Prestamos.uy</h1>
         
     
         
@@ -26,12 +30,12 @@
             <div class="form col-lg-6">
 
                 <div class="m_botton">
-                    <div class="form-group container-md">
+                    <div class="form-group container-md animate__animated animate__fadeIn">
                         <label class="block" for="">Ingrese el monto</label>
                         <input type="number" class="form-control form-control-sm" id="monto" ype="number" min="1" pattern="^[0-9]+">
                     </div>
             
-                    <div class="form-group container-sm">
+                    <div class="form-group container-sm animate__animated animate__fadeIn">
                         <label class="block" for="">Seleccione banco</label>
                         <select id="banco" class="form-control form-control-sm" >
                             <option value="0">Itau</option>
@@ -40,16 +44,16 @@
                         </select>
                     </div>
             
-                    <div class="form-group container-sm">
+                    <div class="form-group container-sm animate__animated animate__fadeIn">
                         <label class="block" for="">Ingrese divisa</label>
                         <select id="divisa" class="form-control form-control-sm" >
                             <option value="1">$</option>
                             <option value="2">€</option>
-                            <option value="3">US$</option>
+                            <option value="3">USD</option>
                         </select>
                     </div>
             
-                    <div class="form-group container-sm"> 
+                    <div class="form-group container-sm animate__animated animate__fadeIn"> 
                         <label class="block"  for="">Seleccione número de pagos</label>
                         <select id="cuotas" class="form-control" >
                             <option value="1">1</option>
@@ -58,14 +62,14 @@
                             <option value="12">12</option>
                         </select>
                     </div>
-                    <div class="form-group container-sm resultado"> 
-                        <div class="resultado" id="show">
-                            
+                    <div class="form-group container-sm resultado "> 
+                        <div id="show">
+
                         </div>
                     </div>
-                    <div class="form-group container-sm resultado1">
+                    <div class="form-group container-sm resultado1 ">
                         <div id="total">
-
+                            <h2>Costo total mensual</h2>
                         </div>
                     </div>
                 <div class="block">
@@ -78,6 +82,7 @@
                     Todos los derechos reservados
                 </footer>
             
+
             </div>
                 </div>
                     

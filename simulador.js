@@ -100,27 +100,69 @@ calcular.addEventListener("click",function(){
         let almacenados = JSON.parse(sessionStorage.getItem("lista_prestamos"));
         
         let prestamos_lista = [];
+
+        
             
         for(const objeto of almacenados){
             prestamos_lista.push(new prestamo_json(objeto));
         }
+        console.log(almacenados);
         function calculador_mensual(acumulador, prestamo) {
 
             acumulador = acumulador + prestamo.resultado;
             return acumulador
         }
 
-        let total = prestamos_lista.reduce(calculador_mensual,0);
+        let prestamos_pesos =[];
+        let prestamos_dolares = [];
+        let prestamos_euros = [];
 
-        let prestamos_usuario = document.getElementById("total")
-        prestamos_usuario.style.visibility = "visible";
-            
-        prestamos_usuario.innerHTML = `<p class="text">Cuota total</p> ${Math.ceil(total)} ${selected_divisa}`
+        for(prestamo of prestamos_lista){
+                
+                if (prestamo.divisa =="$"){
+                    prestamos_pesos.push(prestamo);
+                }
+                else if (prestamo.divisa =="USD"){
+                    prestamos_dolares.push(prestamo);
+                }
+                else if (prestamo.divisa =="€" ){
+                    prestamos_euros.push(prestamo)
+                }
+                
 
+        }
 
+        
+        console.log(prestamos_pesos, "$");
+        console.log(prestamos_dolares, "USD");
+        console.log(prestamos_euros, "EUR");
+        
+        let total_pesos = prestamos_pesos.reduce(calculador_mensual,0);
+
+        let total_dolares = prestamos_dolares.reduce(calculador_mensual,0);
+
+        let total_euros = prestamos_euros.reduce(calculador_mensual,0);
+        
+        
+        let prestamos_usuario = document.getElementById("total");
+        prestamos_usuario.style.visibility = "visible";     
+
+        let parrafos = document.getElementById("p")
+
+        let pesos = document.createElement("p")
+        pesos.innerHTML = `${Math.ceil(total_pesos)} $`;
+        let dolares = document.createElement("p")
+        dolares.innerHTML = `${Math.ceil(total_dolares)} USD`;
+        let euros = document.createElement("p")
+        euros.innerHTML = `${Math.ceil(total_euros)} €` ;
+        
+        prestamos_usuario.appendChild(pesos);
+        prestamos_usuario.appendChild(dolares);
+        prestamos_usuario.appendChild(euros);
 
     
     })
 
-
+    //`${Math.ceil(total_dolares)} USD`
+    //` ${Math.ceil(total_euros)} EUR`
 
