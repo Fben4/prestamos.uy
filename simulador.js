@@ -158,22 +158,6 @@ calcular.addEventListener("click",function(){
         euros.innerHTML = `${Math.ceil(total_euros)} €`
 
 
-        /*
-        let pesos = document.createElement("p")
-        pesos.innerHTML = `${Math.ceil(total_pesos)} $`;
-        let dolares = document.createElement("p")
-        dolares.innerHTML = `${Math.ceil(total_dolares)} USD`;
-        let euros = document.createElement("p")
-        euros.innerHTML = `${Math.ceil(total_euros)} €` ;
-        
-        prestamos_usuario.appendChild(pesos);
-        prestamos_usuario.appendChild(dolares);
-        prestamos_usuario.appendChild(euros);
-        */
-
-    
     })
 
-    //`${Math.ceil(total_dolares)} USD`
-    //` ${Math.ceil(total_euros)} EUR`
 
