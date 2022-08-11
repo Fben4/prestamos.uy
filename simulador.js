@@ -149,6 +149,16 @@ calcular.addEventListener("click",function(){
 
         let parrafos = document.getElementById("p")
 
+        let pesos = document.getElementById("pesos");
+        let dolares = document.getElementById("dolares");
+        let euros = document.getElementById("euros");
+
+        pesos.innerHTML = `${Math.ceil(total_pesos)} $`
+        dolares.innerHTML = `${Math.ceil(total_dolares)} USD`
+        euros.innerHTML = `${Math.ceil(total_euros)} €`
+
+
+        /*
         let pesos = document.createElement("p")
         pesos.innerHTML = `${Math.ceil(total_pesos)} $`;
         let dolares = document.createElement("p")
@@ -159,6 +169,7 @@ calcular.addEventListener("click",function(){
         prestamos_usuario.appendChild(pesos);
         prestamos_usuario.appendChild(dolares);
         prestamos_usuario.appendChild(euros);
+        */
 
     
     })

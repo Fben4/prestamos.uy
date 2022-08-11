@@ -34,6 +34,7 @@ p {
     text-align: center;
     background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
     color: white;
+    margin: 0;
 }
 
 .inner-header {
@@ -104,28 +105,33 @@ p {
         transform: translate3d(85px, 0, 0);
     }
 }
-.loan{
-    height: 500px;
-    width: 500px;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-    animation-name: floating;
-    animation-duration: 3s;
 
+.row{
+    margin: 0;;
+}
+.main{
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
-
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
+.loans{
+    height: 600px;
+    display: flex;
+    justify-content: center;
 }
+
 
 
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
+    
+    .inner-header{
+        height: 20vh;
+    }
     .waves {
         height: 40px;
         min-height: 40px;
@@ -139,25 +145,15 @@ p {
         font-size: 24px;
     }
 
-    .loan{
-        height: 250px;
-        width: 250px;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        margin-left: 30px;
-        margin-top: 5px;
-        animation-name: floating;
-        animation-duration: 3s;
+    .main{
+        height: 400px;
+    }
+
+    .loans{
+        height: 400px;
     
     }
 
-    @keyframes floating {
-        0% { transform: translate(0,  0px); }
-        50%  { transform: translate(0, 15px); }
-        100%   { transform: translate(0, -0px); }   
-    }
-    
-    
 
 }
 
@@ -168,15 +164,6 @@ p {
     justify-content: center;
     align-items: center;
     height: auto;
-}
-
-.main{
-    display: flex;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 0;
 }
 
 
@@ -254,6 +241,18 @@ footer{
     visibility: hidden;
 }
 
-.resultado1{
+#total{
     visibility: hidden;
+}
+
+.table {
+    color : white;
+    border-radius: 20px;
+
+
+}
+
+.flag{
+    height: 35px;
+    width: 35px;
 }
