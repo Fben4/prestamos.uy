@@ -107,6 +107,8 @@ calcular.addEventListener("click",function(){
             prestamos_lista.push(new prestamo_json(objeto));
         }
         console.log(almacenados);
+
+        
         function calculador_mensual(acumulador, prestamo) {
 
             acumulador = acumulador + prestamo.resultado;
@@ -132,10 +134,6 @@ calcular.addEventListener("click",function(){
 
         }
 
-        
-        console.log(prestamos_pesos, "$");
-        console.log(prestamos_dolares, "USD");
-        console.log(prestamos_euros, "EUR");
         
         let total_pesos = prestamos_pesos.reduce(calculador_mensual,0);
 

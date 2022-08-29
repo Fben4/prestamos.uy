@@ -27,6 +27,7 @@ p {
     letter-spacing: 1px;
     font-size: 14px;
     color: white;
+    margin: 0;
 }
 
 .header {
@@ -53,6 +54,12 @@ p {
     text-align: center;
 }
 
+
+.user{
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
 .waves {
     position: relative;
     width: 100%;
@@ -62,6 +69,7 @@ p {
     min-height: 100px;
     max-height: 150px;
 }
+
 
 .content {
     position: relative;
@@ -130,7 +138,8 @@ p {
 @media (max-width: 768px) {
     
     .inner-header{
-        height: 20vh;
+        height: 40vh;
+
     }
     .waves {
         height: 40px;
@@ -153,6 +162,18 @@ p {
         height: 400px;
     
     }
+
+    .navbar{
+        height: 80px;
+        padding-bottom: 40px;
+    }
+
+
+    .login p{
+        display: none;
+    }
+
+
 
 
 }
@@ -247,7 +268,6 @@ footer{
 
 .table {
     color : white;
-    border-radius: 20px;
 
 
 }
@@ -255,4 +275,10 @@ footer{
 .flag{
     height: 35px;
     width: 35px;
+}
+
+
+.login{
+    height: 80px;
+    width: 80px;
 }
